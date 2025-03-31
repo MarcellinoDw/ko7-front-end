@@ -1,0 +1,19 @@
+// _responsive.scss
+
+@media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .button {
+      width: 100%;
+    }
+  }
+  

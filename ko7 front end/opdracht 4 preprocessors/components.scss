@@ -1,0 +1,22 @@
+// _components.scss
+
+.button {
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    cursor: pointer;
+    @include border-radius($border-radius);
+  
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    @include border-radius($border-radius);
+  }
+  

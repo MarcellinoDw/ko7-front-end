@@ -1,0 +1,79 @@
+// Variabelen
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-size: 16px;
+$header-height: 60px;
+$footer-height: 50px;
+
+// Namespace
+%common-styles {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Geneste elementen
+body {
+    @extend %common-styles;
+    font-family: Arial, sans-serif;
+    font-size: $font-size;
+    background-color: #ecf0f1;
+
+    header {
+        background-color: $primary-color;
+        height: $header-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    footer {
+        background-color: $secondary-color;
+        height: $footer-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    nav {
+        background-color: #34495e;
+        padding: 10px;
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+
+            li {
+                margin: 0 15px;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: $font-size;
+            }
+        }
+    }
+}
+
+// Media query voor responsiviteit
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+// Gebruik van @extend om stijlen te hergebruiken
+.button {
+    @extend %common-styles;
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: white;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}

@@ -1,0 +1,22 @@
+// _layout.scss
+
+.container {
+    width: 100%;
+    max-width: $max-width;
+    padding: $base-padding;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: $base-padding;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  

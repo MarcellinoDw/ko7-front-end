@@ -1,0 +1,28 @@
+/* Gebruik van CSS Grid voor de algemene lay-out */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* header, main content, footer */
+    grid-template-columns: 1fr; /* Eén kolom voor mobiele weergave */
+    height: 100vh;
+}
+
+/* Flexbox voor de navigatiebalk */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Layout voor de main content */
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Eén kolom voor mobiel */
+    padding: 20px;
+}
+
+/* Grid voor grotere schermen */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 3fr; /* Twee kolommen voor grotere schermen */
+    }
+}
